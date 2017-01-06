@@ -68,7 +68,8 @@ var agendaSchema = new mongoose.Schema({
     estado: {
         type: String,
         enum: ["", "Planificada", "Publicada"]
-    }
+    },
+    pendingTransactions: [mongoose.Schema.Types.ObjectId]
 });
 
 var agenda = mongoose.model('agenda', agendaSchema, 'agenda');
