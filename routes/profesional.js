@@ -169,7 +169,7 @@ var router = express.Router();
  *           $ref: '#/definitions/profesional'
  */
 router.get('/profesional/:_id*?', function (req, res, next) {
-    if (req.params.id) {
+    if (req.params._id) {
         profesional.findById(req.params._id, function (err, data) {
             if (err) {
                 next(err);
